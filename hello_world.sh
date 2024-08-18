@@ -1,7 +1,4 @@
 #! /bin/bash
 set -euo pipefail
 
-curl --fail --silent https://dot.net/v1/dotnet-install.sh | bash -s -- --jsonfile global.json
-"$HOME/.dotnet/dotnet" tool install dotnet-script > /dev/null
-
-"$HOME/.dotnet/dotnet" script hello_world.csx
+"$( dirname "$0" )/_tools/run_dotnet_script.sh" "_$( basename "$0" .sh ).csx"
