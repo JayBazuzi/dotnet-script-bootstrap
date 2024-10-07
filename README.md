@@ -23,3 +23,9 @@
 - Python is handy but must be system-installed
 - Python package management is a mess
 - C# is typesafe, which is good (fite me!)
+
+## TODO
+
+- Automated tests
+- CI
+- Windows
