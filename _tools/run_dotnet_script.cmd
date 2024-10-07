@@ -14,5 +14,8 @@ set "PATH=%SCRIPT_DIR%.dotnet;%PATH%"
 REM Install dotnet-script tool
 %SCRIPT_DIR%.dotnet\dotnet.exe tool install dotnet-script --tool-path %SCRIPT_DIR%.dotnet >nul
 
+REM Restore dotnet tool to make dotnet-script command available
+%SCRIPT_DIR%.dotnet\dotnet.exe tool restore >nul
+
 REM Run the dotnet script
 %SCRIPT_DIR%.dotnet\dotnet.exe script %*
