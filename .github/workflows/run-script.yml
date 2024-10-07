@@ -26,3 +26,5 @@ jobs:
     - name: Run script on Windows
       if: ${{ matrix.os == 'windows-latest' }}
       run: hello_world.cmd
+      shell: cmd
+
