@@ -19,12 +19,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Run script on Ubuntu
-      if: ${{ matrix.os == 'ubuntu-latest' }}
-      run: ./hello_world.sh
-
-    - name: Run script on Windows
-      if: ${{ matrix.os == 'windows-latest' }}
-      run: hello_world.cmd
-      shell: cmd
+    - name: Run script
+      run: ./hello_world
 

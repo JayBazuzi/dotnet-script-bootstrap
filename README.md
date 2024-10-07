@@ -12,7 +12,7 @@ The original motivation behind this project was time I spent with a software org
 
 ## Solution
 
-1. For a given `foo.csx` script, invite the user to instead run `./foo.sh`.
+1. For a given `foo.csx` script, invite the user to instead run `./foo` or `.\foo`.
 1. This will bootstrap dotnet into a local directory (where it can't clash with dotnet from any other source)
 1. Both dotnet and dotnet-script are installed at the exact versions specified in the JSON configuration files.
 
