@@ -10,11 +10,21 @@ on:
 
 jobs:
   run-script:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Run hello_world.sh script
+    - name: Run script on Ubuntu
+      if: ${{ matrix.os == 'ubuntu-latest' }}
       run: ./hello_world.sh
+
+    - name: Run script on Windows
+      if: ${{ matrix.os == 'windows-latest' }}
+      run: hello_world.cmd
+      shell: cmd
+
