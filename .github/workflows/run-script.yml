@@ -19,5 +19,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Run hello_world.sh script
-      run: ./hello_world.sh
+    - name: Run script
+      run: |
+        if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
+          ./hello_world.sh;
+        else
+          hello_world.cmd;
+        fi
