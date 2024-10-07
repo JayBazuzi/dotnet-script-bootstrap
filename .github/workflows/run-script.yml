@@ -1,4 +1,4 @@
-name: Run Hello World Script
+name: run-script
 
 on:
   push:
