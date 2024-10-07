@@ -22,3 +22,5 @@ jobs:
     - name: Run script
       run: ./hello_world
 
+    - name: Test
+      run: ./test

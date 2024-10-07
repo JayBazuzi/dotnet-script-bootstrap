@@ -1,0 +1,10 @@
+#! /bin/bash
+set -euo pipefail
+
+output=$(./hello_world)
+if [ "$output" == "hello world" ]; then
+  echo "Test passed"
+else
+  echo "Test failed"
+  exit 1
+fi
