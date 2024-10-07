@@ -26,8 +26,3 @@ The original motivation behind this project was time I spent with a software org
 - Python package management is a mess
 - C# is typesafe, which is good (fite me!)
 
-## TODO
-
-- Automated tests
-- CI
-- Windows
