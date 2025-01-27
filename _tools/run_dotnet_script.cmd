@@ -4,8 +4,8 @@ setlocal
 set "SCRIPT_DIR=%~dp0"
 
 REM Download and install .NET
-powershell -Command "Invoke-WebRequest -Uri https://dot.net/v1/dotnet-install.ps1 -OutFile %SCRIPT_DIR%dotnet-install.ps1"
-powershell -ExecutionPolicy Bypass -File "%SCRIPT_DIR%dotnet-install.ps1" -InstallDir "%SCRIPT_DIR%.dotnet" -JsonFile global.json >nul
+powershell -Command "Invoke-WebRequest -Uri https://dot.net/v1/dotnet-install.ps1 -OutFile %TEMP%\dotnet-install.ps1"
+powershell -ExecutionPolicy Bypass -File "%TEMP%\dotnet-install.ps1" -InstallDir "%SCRIPT_DIR%.dotnet" -JsonFile global.json >nul
 set "PATH=%SCRIPT_DIR%.dotnet;%PATH%"
 
 REM Install dotnet-script tool
