@@ -9,7 +9,7 @@ powershell -ExecutionPolicy Bypass -File "%TEMP%\dotnet-install.ps1" -InstallDir
 set "PATH=%SCRIPT_DIR%.dotnet;%PATH%"
 
 REM Install dotnet-script tool
-%SCRIPT_DIR%.dotnet\dotnet.exe tool install dotnet-script --tool-path %SCRIPT_DIR%.dotnet >nul
-%SCRIPT_DIR%.dotnet\dotnet.exe tool restore >nul
+dotnet.exe tool install dotnet-script --tool-path %SCRIPT_DIR%.dotnet >nul
+dotnet.exe tool restore >nul
 
-%SCRIPT_DIR%.dotnet\dotnet.exe script %*
+dotnet.exe script %*
