@@ -5,6 +5,6 @@ output=$(./hello_world)
 if [ "$output" == "hello world" ]; then
   echo "Test passed"
 else
-  echo "Test failed"
+  echo "Test failed. Output = $output"
   exit 1
 fi
